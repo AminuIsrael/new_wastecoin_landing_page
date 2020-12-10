@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Waste collection and recovery app where you get rewarded for proper waste disposal developed by WasteCoin Nigeria" />
-  <title>WasteCoin Ng</title>
+    content="Introducing WasteCoin - a smart mobile app that acts as the digital bank for your household recyclable waste, turning your waste into wealth." />
+  <title>Coming soon</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#000d10">
   <meta name="apple-mobile-web-app-title" content="WasteCoin Nigeria website">
@@ -25,24 +25,19 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#000d10">
   <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" href="./css/all.css"> -->
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap">
-  </noscript>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
-  </noscript>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/Poppins-ExtraBold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
   <style>
     /*!
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
@@ -71,14 +66,6 @@
       content: "\f09a";
     }
 
-    .fa-facebook-f:before {
-      content: "\f39e";
-    }
-
-    .fa-facebook-messenger:before {
-      content: "\f39f";
-    }
-
     .fa-facebook-square:before {
       content: "\f082";
     }
@@ -91,40 +78,6 @@
       content: "\f08c";
     }
 
-    .fa-linkedin-in:before {
-      content: "\f0e1";
-    }
-
-    .fa-bars:before {
-      content: "\f0c9";
-    }
-
-    .fa-times:before {
-      content: "\f00d";
-    }
-    .fa-envelope:before {
-  content: "\f0e0"; }
-
-    .sr-only {
-      border: 0;
-      clip: rect(0, 0, 0, 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto;
-    }
 
     @font-face {
       font-family: 'Font Awesome 5 Brands';
@@ -149,10 +102,6 @@
       src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
     }
 
-    .far {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 400;
-    }
 
     @font-face {
       font-family: 'Font Awesome 5 Free';
@@ -162,85 +111,244 @@
       src: url("./webfonts/fa-solid-900.eot");
       src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
     }
-
-    .fa,
-    .fas {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-    }
   </style>
 </head>
 
 
 <body>
-  <nav class="nav nav-style-light">
-    <div class="logo-section">
-      <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p></a>
-      
-      </div>
-      <div class="menu-icon"  tabindex="1" title="menu toggle">
-        <span id="icon" class="fa fa-bars"></span>
-      </div>
-    </div>
-    <div class="menu-items-section">
-      <a href="./index.html" title="Home">Home</a>
-      <a href="./index.html#how-it-works" title="How it works">How it works</a>
-      <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
-      <a href="./index.html#contact" title="contact us">Contact Us</a>
-    </div>
-  </nav>>
-  </nav>
-
   <main class="main">
-    <section class="section">
-      <div class="banner-text-img-section">
-        <div class="banner-text">
-          <h1>Get the App</h1>
-          <p>To start converting your waste into wealth, get the WasteCoin app on playstore.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.buildforsdg.wastecoin" rel="noreferrer" target="_self" title="Download app from Playstore">Download from playstore</a>
+    <section class="" id="coming-soon-section">
+      <div class="notice-wrapper">
+        <div class="logo">
+          <a href="./index.html" tabindex="1" title="WasteCoin Home page"> <img src="./img/logo.svg"
+              alt="wastecoin logo">
+            <p>WasteCoin</p>
+          </a>
+        </div>
+        <div>
+          <h1>Coming Soon</h1>
+          <p>The WasteCoin mobile app is in development and will soon be available on Google playstore and Apple
+            store.
+            <br>
+          </p>
+          <p>Will you like to be among the first to test the app when it is ready? please fill the form and we will
+            contact you when it is ready.</p>
+          <form action="" method="post" name="email-form" novalidate>
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" name="" id="email">
+              <p class="error-msg">Please provide a valid email address.</p>
+            </div>
+            <button type="submit" id="send-email-btn">Join the waitlist</button>
+          </form>
+        </div>
+        <div class="media-links">
+          <a href="https://www.facebook.com/wastecoins" target="_blank" rel="noreferrer"
+            title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+          <a href="https://www.twitter.com/wastecoins" target="_blank" rel="noreferrer"
+            title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+          <a href="https://www.instagram.com/wastecoins" target="_blank" rel="noreferrer"
+            title="contact us on instagram"><span class="fab fa-instagram"></span></a>
         </div>
       </div>
-      <img src="./img/phone.svg" alt="">
+      <div id="brand-image-wrapper">
+          <h3 class="countdown"></h3>
+        <div class="email-sent-wrapper">
+          <h2>Thanks</h2>
+          <p>Your email has been added to the waiting list. You will be notified when the app is launched.</p>
+        </div>
+      </div>
+
     </section>
     <style>
+      .countdown {
+        font-size: 3rem;
+        color: #ffffff6b;
+        text-align: start;
+        opacity: .4;
+
+      }
+
+      .countdown em {
+        font-style: normal;
+        color: #01dec4;
+        vertical-align: middle;
+        font-size: 4rem;
+        line-height: 1;
+      }
+
       html {
-        background-color: #ffffff;
+        background-color: #b5f2dc;
         font-size: 13px;
         height: 100vh;
         overflow: hidden;
+        background-image: url('./img/leaf.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: normal;
+        ;
       }
 
       .main {
-        padding-top: 80px;
         height: 100vh;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
       }
 
-      .banner-text h1 {
+      .logo>a p {
+        margin-top: 0;
+        font-family: 'Poppins-bold', sans-serif;
+        color: #01dec4;
+      }
+
+      #coming-soon-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 600px;
+        height: 600px;
+        width: 960px;
+        border-radius: 2em !important;
+        box-shadow: 0px 10px 15px #01586c3e;
+        overflow: hidden;
+      }
+
+      #brand-image-wrapper {
+        grid-column: 4 / span 2;
+        background-color: #01586c;
+        background-image: url('./img/leaf.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        height: 100%;
+        grid-row: auto;
+        transition: all 0.3s ease-in;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        position: relative;
+      }
+
+      .notice-wrapper {
+        grid-column: 1 / span 3;
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+      }
+
+      .email-sent-wrapper {
+        display: none;
+      }
+
+      #brand-image-wrapper h2 {
+        font-size: 4rem;
+        font-family: 'Poppins-bold', sans-serif;
+        color: #01dec4;
+        ;
+      }
+
+      #brand-image-wrapper p {
+        color: #fff;
+      }
+
+      .notice-wrapper h1 {
         color: #01586c;
       }
 
-      .banner-text p {
-        color: #000;
+      .notice-wrapper p {
+        color: #01586c;
+        margin-top: 1em;
       }
 
-      .banner-text button {
-        color: #222;
-        padding: 1em 2em;
+      h1 {
+        font-family: 'Poppins-bold', sans-serif;
+        font-weight: 700;
+        font-size: 4.5em;
+        color: #01586c;
+        line-height: 1.2;
+      }
+
+      p {
         font-size: 1.2em;
-        border-radius: 2em;
-        border: none;
-        margin-top: 2em;
-        cursor: pointer;
-        background-color: rgb(3, 169, 158);
       }
 
-      .banner-text button:focus {
+      form .error-msg {
+        font-size: 12px !important;
+        color: red;
+        display: none;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 40px;
+      }
+
+      form #send-email-btn {
+        width: 200px;
+      }
+
+      form input#email {
+        border-radius: 12px;
+        flex: 1;
+        border: none;
+        font-size: 16px;
+        padding: 28px 12px 18px 12px;
+        border: 1px solid #01586c;
+        width: 100%;
+      }
+
+      form .input-wrapper {
+        width: 75%;
+        margin-right: 10px;
+        position: relative;
+      }
+
+      form label {
+        position: absolute;
+        font-size: 16px;
+        left: 12px;
+        top: 24px;
+        pointer-events: none;
+        transition: all 0.1s ease-in;
+      }
+
+      .notice-wrapper button {
+        color: rgb(255, 255, 255);
+        padding: 24px 14px 24px 14px;
+        font-size: 1.2em;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(-45deg, #2effb6, #00d0ff);
+        text-overflow: ellipsis;
+        word-wrap: normal;
+      }
+
+      .notice-wrapper button:focus,
+      #email:focus {
         outline: 2px dashed #fff;
         outline-offset: 5px;
+      }
+
+      .notice-wrapper button:hover {
+        background: linear-gradient(-45deg, #2effb6 -90%, #00d0ff);
       }
 
       .section {
@@ -250,7 +358,7 @@
         height: 100%;
       }
 
-      .banner-text-img-section {
+      .notice-wrapper-img-section {
         padding: 2em 1em;
         box-shadow: -20px 0 20px rgba(0, 0, 0, 0.413);
         border-radius: 2em 0 0 2em;
@@ -261,22 +369,216 @@
         width: 200%;
         height: 100%;
         margin-right: -6em;
-        /* right: -9em; */
         position: absolute;
         z-index: -1;
       }
 
+      .media-links {
+        display: flex;
+        width: 100%;
+      }
+
+      .media-links a {
+        margin-right: 24px;
+        color: #01586c;
+        font-size: 24px;
+      }
 
       @media all and (max-width: 960px) {
-        .banner-text button {
+        #coming-soon-section {
+          grid-template-rows: 100%;
+          height: 80%;
+          width: 80%;
+          box-shadow: none;
+        }
+
+        .notice-wrapper-img-section {
+          box-shadow: none;
+        }
+
+        .notice-wrapper {
+          grid-column: 1 / span 5;
+        }
+
+        #brand-image-wrapper {
+          display: none;
+        }
+
+        form .input-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media all and (max-width: 768px) {
+        #coming-soon-section {
+          grid-template-rows: 100%;
+          height: 100%;
+          width: 100%;
+          box-shadow: none;
+        }
+
+        .notice-wrapper button {
           width: 240px;
+        }
+
+        .notice-wrapper-img-section {
+          box-shadow: none;
+        }
+
+        .notice-wrapper {
+          grid-column: 1 / span 5;
+        }
+
+        #brand-image-wrapper {
+          display: none;
+        }
+
+        form .input-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media all and (max-width: 632px) {
+        form {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        form #send-email-btn {
+          width: fit-content;
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+
+      @media all and (max-height: 768px) and (max-width:768px) {
+        html {
+          background-color: #fff;
+        }
+
+        #coming-soon-section {
+          border-radius: 0 !important;
+        }
+
+        .notice-wrapper {
+          border-radius: 0;
+        }
+
+        .media-links {
+          margin-top: 40px;
+        }
+
+        .logo {
+          margin-bottom: 40px;
+        }
+
+        body,
+        #coming-soon-section,
+        html,
+        .main {
+          overflow-y: auto;
         }
 
       }
     </style>
     </section>
   </main>
-  <script src="./js/main.js" defer></script>
+
+
+  <script>
+    const emalInput = document.querySelector('form input#email');
+    const inputLabel = document.querySelector('form label');
+    const form = document.querySelector('form[name="email-form"]');
+    const errorMsg = document.querySelector('.error-msg');
+    var emailData = "";
+
+    const brandImgWrapper = document.getElementById('brand-image-wrapper');
+    const noticeWrapper = document.querySelector('.notice-wrapper');
+    const emailSentWrapper = document.querySelector('.email-sent-wrapper');
+
+    emalInput.addEventListener('focus', function () {
+      inputLabel.style.top = '10px';
+      inputLabel.style.fontSize = '12px';
+    });
+    emalInput.addEventListener('blur', function () {
+      repositionLabel();
+    });
+    const repositionLabel = () => {
+      if (!emalInput.value) {
+        inputLabel.style.top = '24px';
+        inputLabel.style.fontSize = '16px';
+        return;
+      };
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.checkValidity() && emalInput.value !== '') {
+        emailData = emalInput.value;
+        return postEmail('https://wastecoinmvp.herokuapp.com/email_collector', {
+          "email": `${emailData}`
+        });
+      };
+      return errorMsg.style.display = 'block';
+    })
+
+    async function postEmail(url = '', data) {
+      try {
+        let response = await fetch(url, {
+          method: 'POST',
+          mode: 'cors', 
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+            // "Accept": 'application/json',
+          }
+        });
+        let status = await response.status;
+        if (status === 200) return showSentEmailConfirmationModal();
+      } catch (err) {
+        console.log(err);
+      };
+    };
+
+    function showSentEmailConfirmationModal() {
+      emailSentWrapper.style.display = 'block';
+      brandImgWrapper.style.gridColumn = '1 / span 5';
+      brandImgWrapper.style.display = 'flex';
+      noticeWrapper.style.display = 'none';
+    };
+
+    const countdownElem = document.querySelector('.countdown');
+    let timeElem = document.querySelectorAll('.countdown em');
+    const completionTime = '4/30/2021';
+
+    function getDecimals(n) {
+      let num = String(n);
+      num = num.replace(/[0-9]+\./, '0.');
+      return Number(num);
+    }
+
+    function calculateTime() {
+      let duration = new Date(completionTime) - new Date();
+      let days = Math.floor(duration / 1000 / 3600 / 24)
+      let hours = Math.floor(duration / 1000 / 3600 % 24);
+      let minutes = Math.floor(((duration / 1000 / 3600 % 24) - hours) * 60);
+      let unflooredHour = (((duration / 1000 / 3600 % 24) - hours) * 60);
+      seconds = Math.floor(getDecimals(unflooredHour) * 60);
+
+      countdownElem.innerHTML =
+        `<em>${days}</em> ${days>1? 'Days':'Day'} <br>
+        <em>${hours}</em> ${hours>1? 'Hrs':'Hr'} <br> 
+        <em>${minutes}</em> ${minutes>1? 'Mins':'Min'} <br>
+        <em>${seconds}</em> ${seconds>1? 'Secs':'Sec'}`;
+    };
+
+    let countDown = setInterval(calculateTime, 1000);
+    window.onload = () => {
+      countDown;
+    };
+  </script>
 </body>
 
 </html>
