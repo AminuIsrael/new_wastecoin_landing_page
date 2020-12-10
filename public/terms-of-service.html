@@ -31,19 +31,6 @@
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/privacy.css">
-  <!-- <link rel="stylesheet" href="./css/all.css"> -->
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap">
-  </noscript>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
-  </noscript>
   <style>
     /*!
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
@@ -174,25 +161,41 @@
 
 
 <body>
-  <nav class="nav nav-style-dark">
-    <div class="logo-section">
-      <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p></a>
-      
-      </div>
-      <div class="menu-icon"  tabindex="1" title="menu toggle">
-        <span id="icon" class="fa fa-bars"></span>
-      </div>
-    </div>
-    <div class="menu-items-section">
-      <a href="./index.html" title="Home">Home</a>
-      <a href="./index.html#how-it-works" title="How it works">How it works</a>
-      <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
-      <a href="./index.html#contact" title="contact us">Contact Us</a>
-      <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
-    </div>
-  </nav>
+      <!-- Desktop nav bar -->
+      <nav class="nav nav-style-dark"  id="nav-desktop">
+        <div class="logo-section">
+          <div class="logo">
+            <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
+              <p>WasteCoin</p>
+            </a>
+          </div>
+        </div>
+        <div class="menu-items-section">
+          <a href="#how-it-works" title="How it works">How it works</a>
+          <a href="#why-wasteCoin" title="Why WasteCoin">Why WasteCoin</a>
+          <a href="#contact" title="contact us">Contact Us</a>
+          <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
+        </div>
+      </nav>
+      <!-- Mobile nav bar -->
+      <nav class="nav nav-style-dark" id="nav-mobile">
+        <div class="logo-section">
+          <div class="logo">
+            <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
+              <p>WasteCoin</p>
+            </a>
+          </div>
+          <div class="menu-icon" tabindex="0" title="menu toggle">
+            <span id="icon" class="fa fa-bars"></span>
+          </div>
+        </div>
+        <div class="menu-items-section-mobile">
+          <a href="#how-it-works" title="How it works">How it works</a>
+          <a href="#why-wasteCoin" title="Why WasteCoin">Why WasteCoin</a>
+          <a href="#contact" title="contact us">Contact Us</a>
+          <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
+        </div>
+      </nav>
 
   <main class="main">
     <section id="privacy" class="section">
@@ -200,7 +203,7 @@
 
       <h2>1. Terms</h2>
 
-      <p>By accessing this Website, accessible from https://www.wastecoin.com, you are agreeing to be bound by these
+      <p>By accessing this Website you are agreeing to be bound by these
         Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable
         local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials
         contained in this Website are protected by copyright and trade mark law.</p>
@@ -269,24 +272,23 @@
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
-  <img src="./img/flow3.SVG" alt="" class="footer-swirl">
   <footer class="footer">
-  
     <div class="footer-content-wrapper" id="contact">
       <div class="footer-content">
         <div class="contact">
           <header class="footer-header">Connect with us</header>
           <p class="social-media">
-            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
-              <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
-              <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
-              <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
-            </p>
-        </div>
-        <div class="sitemap">
-          <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
-          <a href="index.html#how-it-works" title="how it works">How it works</a>
-          <a href="index.html#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
+            <a href="https://www.facebook.com/wastecoins" target="_blank" rel="noreferrer"
+              title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+            <a href="https://www.twitter.com/wastecoins" target="_blank" rel="noreferrer"
+              title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+            <a href="https://www.instagram.com/wastecoins" target="_blank" rel="noreferrer"
+              title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+              <br> <br>
+              <p class="footer-header">Or send us an email</p>
+              <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
+              class="email"><span class="fas fa-envelope"></span> &nbsp; info@wastecoin.co</a>
+          </p>
         </div>
         <div class="others">
           <a href="terms-of-service.html" title="Terms of service">Terms of service</a>
