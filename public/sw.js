@@ -1,78 +1,49 @@
 const filesToCache = [
-  '/',
-  'index.html',
-  './privacy-policy.html',
-  './terms-of-service.html',
-  './get-app.html',
-  'css/privacy.css',
-  'js/main.js',
+  'offline.html',
   'css/all.css',
   'js/wow.min.js',
+  'css/animate.css',
   './favicon.ico',
   'img/bg1.SVG',
-  'img/art1.SVG',
-  'img/art2.SVG',
-  'img/art3.SVG',
-  'img/art4.SVG',
-  'img/wallet.svg',
-  'img/flow1.svg',
-  'img/flow2.SVG',
-  'img/flow3.SVG',
+  'img/photo1.png',
+  'img/photo2.PNG',
+  'img/photo3.PNG',
+  'img/photo4.PNG',
   'img/bg-illustration.webp',
-  'img/phone.svg',
   'img/logo.svg',
-  'img/bg-img.webp',
-  'manifest.json',
-  // 'webfonts/fa-solid-900.eot',
-  // 'webfonts/fa-solid-900.svg',
-  // 'webfonts/fa-solid-900.ttf',
-  // 'webfonts/fa-solid-900.woff',
+  'img/leaf.svg',
+  'img/artwork1.svg',
+  'img/artwork2.svg',
+  'img/artwork3.svg',
   'webfonts/fa-solid-900.woff2',
-  'webfonts/fa-brands-400.woff2'
+  'webfonts/fa-brands-400.woff2',
+  'fonts/Poppins-ExtraBold.woff2',
+  'fonts/Montserrat-Regular.woff2',
+  'fonts/Montserrat-Bold.woff2',
+  'fonts/Poppins-ExtraBold.woff',
+  'fonts/Montserrat-Regular.woff',
+  'fonts/Montserrat-Bold.woff'
 ];
 
-const staticCacheName = 'wastecoin-cache-v1';
+const cacheName = 'wastecoin-cache-v2';
 
 self.addEventListener('install', event => {
-  // console.log('Attempting to install service worker and cache static assets');
+  console.log('Attempting to install service worker and cache static assets');
   self.skipWaiting();
   event.waitUntil(
-    caches.open(staticCacheName)
+    caches.open(cacheName)
       .then(cache => {
-        return cache.addAll(filesToCache);
+        cache.addAll(filesToCache)
+          .then(() => console.log('files added'))
+          .catch(error => console.log(error))
       })
-  );
-});
-
-self.addEventListener('fetch', event => {
-  console.log('Fetch event for ', event.request.url);
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          // console.log('Found ', event.request.url, ' in cache');
-          return response;
-        }
-        // console.log('Network request for ', event.request.url);
-        return fetch(event.request)
-
-          .then(response => {
-            return caches.open(staticCacheName).then(cache => {
-              cache.put(event.request.url, response.clone());
-              return response;
-            });
-          });
-
-      }).catch(error => {
-        //offline page
-      })
+      .catch(error => console.log(error))
   );
 });
 
 self.addEventListener('activate', event => {
-  // console.log('Activating new service worker...');
-  const cacheAllowlist = [staticCacheName];
-
+  console.log('Activating new service worker...');
+  const cacheAllowlist = [cacheName];
   self.skipWaiting();
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -83,6 +54,20 @@ self.addEventListener('activate', event => {
           }
         })
       );
+    })
+  );
+});
+
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    // Try the cache
+    caches.match(event.request).then(function (response) {
+      return response || fetch(event.request)
+        .then(response => {
+          return response
+        });
+    }).catch(function () {
+      return caches.match(`${event.currentTarget.location.origin + '/offline.html'}`);
     })
   );
 });
